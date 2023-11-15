@@ -1,32 +1,33 @@
 # Quantum Quill Swift
 
-The Quantum Quill Swift Package have extensions and function for the daily use and for a cleaner code.
+The Quantum Quill Swift package offers extensions and functions for daily use, promoting cleaner code.
 
-Some of the extensions are from this [Site](https://betterprogramming.pub/24-swift-extensions-for-cleaner-code-41e250c9c4c3). Thank you to Alisa "Foxicorn" Nekrasova for this great article. This article was the inspiration for this swift-package. All other extensions I found it at the last years or write it self.
+Several extensions are sourced from this [site](https://betterprogramming.pub/24-swift-extensions-for-cleaner-code-41e250c9c4c3). A special thanks to Alisa "Foxicorn" Nekrasova for her excellent article, which served as inspiration for this Swift package. Additionally, some extensions were discovered in the past year, while others were authored for specific use cases.
 
-## Table of content
+## Table of Contents
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [License](#license)
 
 ## Features
-- Create colors with HTML Hex values
-- Simply date formatting
-- Convert celsius to fahrenheit and reverse
-- Convert kilometer to miles and reverse
-- Convert kilowatt to horse power and reverse
-- Some Double Formmatting
-- Some Integer Formatting
-- Check for valid email address
-- Check for valid phone number
-- Add prefix if it not exist
-- Check string if it alpha numeric
-- Check string if only contains digits
-- Some path functions and formatting functions
+- Create colors using HTML Hex values
+- Simplify date formatting
+- Convert Celsius to Fahrenheit and vice versa
+- Convert kilometers to miles and vice versa
+- Convert kilowatts to horsepower and vice versa
+- Double formatting utilities
+- Integer formatting utilities
+- Validate email addresses
+- Validate phone numbers
+- Add a prefix if it does not exist
+- Check if a string is alphanumeric
+- Check if a string contains only digits
+- Various path functions and formatting utilities
 
 ## Requirements
-The following table shows the requirements for this Package:
+The following table outlines the requirements for this package:
+
 | Platform | Minimum Swift Version | Installation |
 | -------- | --------------------- | ------------ |
 | iOS 14.0+ / macOS 10.15+ | 5.3 | [Swift Package Manager](#swift-package-manager)|
@@ -34,7 +35,7 @@ The following table shows the requirements for this Package:
 ## Installation
 ### Swift Package Manager
 
-```
+```swift
 dependencies: [
     .package(url: "https://github.com/Flexible-Universe/QuantumQuillSwift.git", .upToNextMajor(from: "1.0.0"))
 ]

@@ -7,10 +7,20 @@
 
 import Foundation
 
-extension Bundle {
-    /// To show the display name of the app
-    /// - Returns: The display name of the app
-    public var displayName: String {
+/// The Bundle extensions provide convenient properties to access information from the main bundle.
+public extension Bundle {
+    /// The display name of the main bundle.
+    ///
+    /// This property retrieves the value of the `CFBundleDisplayName` key from the main bundle's info dictionary.
+    ///
+    /// Example:
+    /// ```
+    /// let name = Bundle.main.displayName
+    /// print("App Name: \(name)")
+    /// ```
+    ///
+    /// - Returns: A string representing the display name of the main bundle. If the key is not present or the value is not a string, an empty string is returned.
+    var displayName: String {
         guard let dictionary = Bundle.main.infoDictionary else {
             return ""
         }
@@ -20,9 +30,18 @@ extension Bundle {
 
         return ""
     }
-    /// To show the bundle identifier of the app
-    /// - Returns: The bundle identifier of the app
-    public var bundleIdentifier: String {
+    /// The bundle identifier of the main bundle.
+    ///
+    /// This property retrieves the value of the `CFBundleIdentifier` key from the main bundle's info dictionary.
+    ///
+    /// Example:
+    /// ```
+    /// let identifier = Bundle.main.bundleIdentifier
+    /// print("Bundle Identifier: \(identifier)")
+    /// ```
+    ///
+    /// - Returns: A string representing the bundle identifier of the main bundle. If the key is not present or the value is not a string, an empty string is returned.
+    var bundleIdentifier: String {
         guard let dictionary = Bundle.main.infoDictionary else {
             return ""
         }
@@ -32,9 +51,18 @@ extension Bundle {
         
         return ""
     }
-    /// To show the version number of the app
-    /// - Returns: The version number of the app
-    public var buildVersionNumber: String {
+    /// The build version number of the main bundle.
+    ///
+    /// This property retrieves the value of the `CFBundleVersion` key from the main bundle's info dictionary.
+    ///
+    /// Example:
+    /// ```
+    /// let buildVersion = Bundle.main.buildVersionNumber
+    /// print("Build Version: \(buildVersion)")
+    /// ```
+    ///
+    /// - Returns: A string representing the build version number of the main bundle. If the key is not present or the value is not a string, an empty string is returned.
+    var buildVersionNumber: String {
         guard let dictionary = Bundle.main.infoDictionary else {
             return ""
         }
@@ -44,9 +72,18 @@ extension Bundle {
         
         return ""
     }
-    /// To show the release number or DEV as release number of the app
-    /// - Returns: The release number of the app or if the release number is zero than DEV
-    public var buildReleaseNumber: String {
+    /// The build release number of the main bundle.
+    ///
+    /// This property retrieves the value of the `CFBundleShortVersionString` key from the main bundle's info dictionary.
+    ///
+    /// Example:
+    /// ```
+    /// let releaseVersion = Bundle.main.buildReleaseNumber
+    /// print("Release Version: \(releaseVersion)")
+    /// ```
+    ///
+    /// - Returns: A string representing the build release number of the main bundle. If the key is not present or the value is not a string, an empty string is returned.
+    var buildReleaseNumber: String {
         guard let dictionary = Bundle.main.infoDictionary else {
             return ""
         }
