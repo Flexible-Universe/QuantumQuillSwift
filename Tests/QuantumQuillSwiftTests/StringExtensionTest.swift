@@ -124,4 +124,10 @@ final class StringExtensionTest: XCTestCase {
         let testTelephoneNumber = "+49 123 456 789 01"
         XCTAssertFalse(testTelephoneNumber.isPhoneNumberValid())
     }
+    
+    func testCapitalizeFirstLetter() throws {
+        var testString = "entenhausen"
+        testString.capitalizeFirstLetter()
+        XCTAssertEqual("Entenhausen", testString)
+    }
 }

@@ -50,12 +50,12 @@ final class NumberExtensionTest: XCTestCase {
     
     func testKilometreToMiles() throws {
         let testKilometre = 10.0
-        XCTAssertEqual(6.21371, testKilometre.kilometreToMiles())
+        XCTAssertEqual(6.21371, testKilometre.kilometerToMiles())
     }
     
     func testMilesToKilometre() throws {
         let testMiles = 5.0
-        XCTAssertEqual(8.0467, testMiles.milesToKilometre())
+        XCTAssertEqual(8.0467, testMiles.milesToKilometer())
     }
     
     func testKilowattToPs() throws {

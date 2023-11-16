@@ -133,6 +133,16 @@ public extension String {
         let phoneCheck = NSPredicate(format: "SELF MATCHES[c] %@", regEx)
         return phoneCheck.evaluate(with: self)
     }
+    
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
+
+    private func capitalizingFirstLetter() -> String {
+        let first = String(self.prefix(1)).capitalized
+        let other = String(self.dropFirst())
+        return first + other
+    }
 }
 
 

@@ -8,6 +8,7 @@ Several extensions are sourced from this [site](https://betterprogramming.pub/24
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Documentation](#documentation)
 - [License](#license)
 
 ## Features
@@ -40,6 +41,9 @@ dependencies: [
     .package(url: "https://github.com/Flexible-Universe/QuantumQuillSwift.git", .upToNextMajor(from: "1.0.0"))
 ]
 ```
+
+## Documentation
+The comprehensive documentation is accessible through this [link](https://docs.flexible-universe.com/QuantumQuillSwift/).
 
 ## License
 QuantumQuillSwift is released under the MIT license. [See LICENSE](https://github.com/Flexible-Universe/QuantumQuillSwift/blob/main/LICENSE) for details.

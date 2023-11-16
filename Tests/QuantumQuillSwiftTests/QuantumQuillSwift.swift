@@ -1,7 +1,7 @@
 import XCTest
-@testable import CommonHelper
+@testable import QuantumQuillSwift
 
-final class CommonHelperTests: XCTestCase {
+final class QuantumQuillSwiftTests: XCTestCase {
     func testExample() throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest
