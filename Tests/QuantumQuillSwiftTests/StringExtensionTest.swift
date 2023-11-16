@@ -130,4 +130,14 @@ final class StringExtensionTest: XCTestCase {
         testString.capitalizeFirstLetter()
         XCTAssertEqual("Entenhausen", testString)
     }
+    
+    func testBoolValueTrue() throws {
+        let testBool = "true".boolValue
+        XCTAssertTrue(testBool)
+    }
+
+    func testBoolValueFalse() throws {
+        let testBool = "false".boolValue
+        XCTAssertFalse(testBool)
+    }
 }

@@ -143,6 +143,16 @@ public extension String {
         let other = String(self.dropFirst())
         return first + other
     }
+    /// To convert the words "true" or "false" to the boolean value
+    ///
+    /// Example:
+    ///  ```
+    ///  let testTrueBool = "true".boolValue // true
+    ///  let testFalseBool = "false".boolValue  // false
+    ///  ```
+    var boolValue: Bool {
+        return (self as NSString).boolValue
+    }
 }
 
 

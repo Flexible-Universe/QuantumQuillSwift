@@ -73,4 +73,14 @@ final class NumberExtensionTest: XCTestCase {
         roundValue.roundTo(places: 1)
         XCTAssertEqual(213.3, roundValue)
     }
+    
+    func testIntToBoolTrue() throws {
+        let testBool = 1.toBool()
+        XCTAssertTrue(testBool)
+    }
+    
+    func testIntToBoolFalse() throws {
+        let testBool = 0.toBool()
+        XCTAssertFalse(testBool)
+    }
 }

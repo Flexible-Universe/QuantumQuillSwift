@@ -51,6 +51,10 @@ public extension Int {
     func toString() -> String {
         "\(self)"
     }
+    
+    func toBool() -> Bool {
+        Bool(truncating: self as NSNumber)
+    }
 }
 
 /// This set of extensions provides a variety of utility functions for common conversions in Swift. It includes functions
