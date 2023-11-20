@@ -133,11 +133,27 @@ public extension String {
         let phoneCheck = NSPredicate(format: "SELF MATCHES[c] %@", regEx)
         return phoneCheck.evaluate(with: self)
     }
-    
+    /// Modifies the string by capitalizing its first letter.
+    ///
+    /// Example:
+    ///   ```
+    ///   var text = "hello world"
+    ///   text.capitalizeFirstLetter()
+    ///   print(text) // Output: "Hello world"
+    ///   ```
     mutating func capitalizeFirstLetter() {
         self = self.capitalizingFirstLetter()
     }
-
+    /// Returns a new string with its first letter capitalized.
+    ///
+    /// Example:
+    ///   ```
+    ///   let originalText = "hello world"
+    ///   let capitalizedText = originalText.capitalizingFirstLetter()
+    ///   print(capitalizedText) // Output: "Hello world"
+    ///   ```
+    ///
+    /// - Returns: A new string with the first letter capitalized.
     private func capitalizingFirstLetter() -> String {
         let first = String(self.prefix(1)).capitalized
         let other = String(self.dropFirst())

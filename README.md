@@ -25,6 +25,7 @@ Several extensions are sourced from this [site](https://betterprogramming.pub/24
 - Check if a string is alphanumeric
 - Check if a string contains only digits
 - Various path functions and formatting utilities
+- Date formating and calculation utilities
 
 ## Requirements
 The following table outlines the requirements for this package:
