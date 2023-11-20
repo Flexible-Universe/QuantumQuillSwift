@@ -153,6 +153,23 @@ public extension String {
     var boolValue: Bool {
         return (self as NSString).boolValue
     }
+    /// Converts the string representation of a date to a Date object using the specified format.
+    ///
+    /// Example:
+    ///   ```
+    ///   let dateString = "2023-01-15"
+    ///   if let date = dateString.toDate(format: "yyyy-MM-dd") {
+    ///       print(date) // Output: 2023-01-15 00:00:00 +0000
+    ///   }
+    ///   ```
+    ///
+    /// - Parameter format: The format of the date string.
+    /// - Returns: A Date object representing the parsed date, or nil if parsing fails.
+    func toDate(format: String) -> Date? {
+        let df = DateFormatter()
+        df.dateFormat = format
+        return df.date(from: self)
+    }
 }
 
 

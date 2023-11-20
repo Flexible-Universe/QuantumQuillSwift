@@ -10,6 +10,17 @@ import CoreLocation
 
 final class StringExtensionTest: XCTestCase {
     
+    private let initialStringDate = "2020-08-10 15:00:00"
+    private let initialDateFormat = "yyyy-MM-dd HH:mm:ss"
+    private var initialDate: Date?
+
+    override func setUpWithError() throws {
+        let dtFormatter = DateFormatter()
+        dtFormatter.dateFormat = initialDateFormat
+        
+        initialDate = dtFormatter.date(from: initialStringDate)
+    }
+
     func testTrimmedString() throws {
         let str1 = "  a b c d e   \n"
         let str2 = str1.trimmed
@@ -103,7 +114,7 @@ final class StringExtensionTest: XCTestCase {
     func testStringWithPrefixNotExists() throws {
         XCTAssertEqual("https://www.flexible-universe.com", "www.flexible-universe.com".withPrefix("https://"))
     }
-    func testStringWidthPrefixIfExists() throws {
+    func testStringWithPrefixIfExists() throws {
         XCTAssertEqual("https://www.flexible-universe.com", "https://www.flexible-universe.com".withPrefix("https://"))
     }
     func testIsEmailValidTrue() throws {
@@ -139,5 +150,11 @@ final class StringExtensionTest: XCTestCase {
     func testBoolValueFalse() throws {
         let testBool = "false".boolValue
         XCTAssertFalse(testBool)
+    }
+    
+    func testStringToDate() throws {
+        let strDate = "2020-08-10 15:00:00"
+        let date = strDate.toDate(format: "yyyy-MM-dd HH:mm:ss")
+        XCTAssertEqual(date, initialDate)
     }
 }

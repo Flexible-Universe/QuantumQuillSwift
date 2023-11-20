@@ -51,7 +51,12 @@ public extension Int {
     func toString() -> String {
         "\(self)"
     }
-    
+    /// Converts a Integer to a Bool Value
+    ///
+    /// Example:
+    ///   ```
+    ///   let testBool = 1.toBool() // true
+    ///   ```
     func toBool() -> Bool {
         Bool(truncating: self as NSNumber)
     }
