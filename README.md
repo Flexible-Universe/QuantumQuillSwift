@@ -12,9 +12,11 @@ Several extensions are sourced from this [site](https://betterprogramming.pub/24
 - [License](#license)
 
 ## Features
-- Create colors using HTML Hex values
+- Create colors using HTML Hex values for UIKit and SwiftUI
 - Simplify date formatting
 - Convert Celsius to Fahrenheit and vice versa
+- Convert Celsius to Kelvin and vice versa
+- Convert Fahrenheit to Kelvin and vice versa
 - Convert kilometers to miles and vice versa
 - Convert kilowatts to horsepower and vice versa
 - Double formatting utilities
