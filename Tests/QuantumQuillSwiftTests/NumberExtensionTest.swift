@@ -48,6 +48,29 @@ final class NumberExtensionTest: XCTestCase {
         XCTAssertEqual(16.0, testCelsius.fahrenheitToCelsius())
     }
     
+    func testCelsiusToKelvin() throws {
+        let testCelsius = 77.0
+        XCTAssertEqual(350.15, testCelsius.celsiusToKelvin())
+    }
+    
+    func testKelvinToCelsius() throws {
+        let testKelvin = 77.0
+        let result = testKelvin.kelvinToCelsius()
+        XCTAssertEqual(-196.15, result.roundedDecimal(to: 2))
+    }
+
+    func testFahrenheitToKelvin() throws {
+        let testFahrenheit = 10.0
+        let result = testFahrenheit.fahrenheitToKelvin()
+        XCTAssertEqual(260.93, result.roundedDecimal(to: 2))
+    }
+
+    func testKelvinToFahrenheit() throws {
+        let testKelvin = 300.0
+        let result = testKelvin.KelvinToFahrenheit()
+        XCTAssertEqual(80.33, result.roundedDecimal(to: 2))
+    }
+    
     func testKilometreToMiles() throws {
         let testKilometre = 10.0
         XCTAssertEqual(6.21371, testKilometre.kilometerToMiles())
@@ -68,10 +91,9 @@ final class NumberExtensionTest: XCTestCase {
         XCTAssertEqual(58.8399, testPS.psToKw())
     }
     
-    func testRoundTo() throws {
+    func testRoundedDecimal() throws {
         var roundValue = 213.3244
-        roundValue.roundTo(places: 1)
-        XCTAssertEqual(213.3, roundValue)
+        XCTAssertEqual(213.3, roundValue.roundedDecimal(to: 1))
     }
     
     func testIntToBoolTrue() throws {

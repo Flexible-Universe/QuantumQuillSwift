@@ -140,7 +140,63 @@ public extension Double {
     func fahrenheitToCelsius() -> Double {
         (5/9) * (self - 32)
     }
+    /// Converts the temperature from Celsius to Kelvin.
+    ///
+    /// - Returns: A double value representing the temperature in Kelvin.
+    ///
+    /// - Example:
+    ///   ```
+    ///   let celsiusTemperature = 77.0
+    ///   let klevinTemperature = celsiusTemperature.celsiusToKelvin
+    ///   print(klevinTemperature) // Output: 350.15
+    ///   ```
+    func celsiusToKelvin() -> Double {
+        self + 273.15
+    }
+    /// Converts the temperature from Kelvin to Celsius.
+    ///
+    /// - Returns: A double value representing the temperature in Celsius.
+    ///
+    /// - Example:
+    ///   ```
+    ///   let kelvinTemperature = 77.0
+    ///   let celsiusTemperature = klevinTemperature.klevinToCelsius()
+    ///   print(celsiusTemperature) // Output: -196.15
+    ///   ```
+    func kelvinToCelsius() -> Double {
+        self - 273.15
+    }
+    /// Converts the temperature from Fahrenheit to Kelvin.
+    ///
+    /// - Returns: A double value representing the temperature in Kelvin.
+    ///
+    /// - Example:
+    ///   ```
+    ///   let fahrenheitTemperature = 10
+    ///   let kelvinTemperature = fahrenheitTemperature.fahrenheitToKelvin()
+    ///   print(kelvinTemperature) // Output: 260.93
+    ///   ```
+    func fahrenheitToKelvin() -> Double {
+        let celsius = self.fahrenheitToCelsius()
+        return celsius.celsiusToKelvin()
+    }
+    /// Converts the temperature from Kelvin to Fahrenheit.
+    ///
+    /// - Returns: A double value representing the temperature in Fahrenheit.
+    ///
+    /// - Example:
+    ///   ```
+    ///   let kelvinTemperature = 300.0
+    ///   let fahrenheitTemperature = kelvinTemperature.kelvinToFahrenheit()
+    ///   print(fahrenheitTemperature) // Output: 80.33
+    ///   ```
+    func KelvinToFahrenheit() -> Double {
+        let celsius = self.kelvinToCelsius()
+        return celsius.celsiusToFahrenheit()
+    }
     /// Converts the distance from kilometers to miles.
+    ///
+    /// - Returns: A double value representing the distance in miles.
     ///
     /// Example:
     ///   ```
@@ -148,12 +204,12 @@ public extension Double {
     ///   let miles = kilometers.kilometerToMiles()
     ///   print(miles) // Output: 6.21371
     ///   ```
-    ///
-    /// - Returns: A double value representing the distance in miles.
     func kilometerToMiles() -> Double {
         self * 0.621371
     }
     /// Converts the distance from miles to kilometers.
+    ///
+    /// - Returns: A double value representing the distance in kilometers.
     ///
     /// Example:
     ///   ```
@@ -161,8 +217,6 @@ public extension Double {
     ///   let kilometers = miles.milesToKilometer()
     ///   print(kilometers) // Output: 10.0
     ///   ```
-    ///
-    /// - Returns: A double value representing the distance in kilometers.
     func milesToKilometer() -> Double {
         self * 1.60934
     }
@@ -192,18 +246,16 @@ public extension Double {
     func psToKw() -> Double {
         self * 0.73549875
     }
-    /// Rounds the value to the specified number of decimal places.
+    /// Convert `Double` to `Decimal`, rounding it to `scale` decimal places.
     ///
-    /// Example:
-    ///   ```
-    ///   var value = 3.14159
-    ///   value.roundTo(2)
-    ///   print(value) // Output: 3.14
-    ///   ```
-    ///
-    /// - Parameter places: The number of decimal places to round to.
-    mutating func roundTo(places: Int) {
-        let divisor = pow(10.0, places.toDouble())
-        self = (self * divisor).rounded() / divisor
+    /// - Parameters:
+    ///   - scale: How many decimal places to round to. Defaults to `0`.
+    ///   - mode:  The preferred rounding mode. Defaults to `.plain`.
+    /// - Returns: The rounded `Decimal` value.
+    func roundedDecimal(to scale: Int = 0, mode: NSDecimalNumber.RoundingMode = .plain) -> Decimal {
+        var decimalValue = Decimal(self)
+        var result = Decimal()
+        NSDecimalRound(&result, &decimalValue, scale, mode)
+        return result
     }
 }
