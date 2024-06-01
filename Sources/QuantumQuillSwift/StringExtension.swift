@@ -166,7 +166,7 @@ public extension String {
     ///  let testTrueBool = "true".boolValue // true
     ///  let testFalseBool = "false".boolValue  // false
     ///  ```
-    var boolValue: Bool {
+    var toBool: Bool {
         return (self as NSString).boolValue
     }
     /// Converts the string representation of a date to a Date object using the specified format.

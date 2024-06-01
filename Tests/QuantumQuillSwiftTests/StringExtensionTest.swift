@@ -143,12 +143,12 @@ final class StringExtensionTest: XCTestCase {
     }
     
     func testBoolValueTrue() throws {
-        let testBool = "true".boolValue
+        let testBool = "true".toBool
         XCTAssertTrue(testBool)
     }
 
     func testBoolValueFalse() throws {
-        let testBool = "false".boolValue
+        let testBool = "false".toBool
         XCTAssertFalse(testBool)
     }
     

@@ -25,4 +25,18 @@ public extension Bool {
     func toInt() -> Int {
         self ? 1 : 0
     }
+    
+    /// Extends the Bool type to convert the boolean value to the string "true" oder "false"
+    ///
+    /// Example:
+    ///   ```
+    ///   let isTrue = true
+    ///   let stringValue = isTrue.toString()
+    ///   print(stringValue) // Output: "1"
+    ///   ```
+    ///
+    /// - Returns: The string `true` or `false`.
+    func toString() -> String {
+        self ? "true" : "false"
+    }
 }
