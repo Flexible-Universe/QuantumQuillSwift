@@ -32,6 +32,10 @@ Several extensions are sourced from this [site](https://betterprogramming.pub/24
 - Check if a string contains only digits
 - Various path functions and formatting utilities
 - Various date formating and calculation utilities
+- Added some SwiftUI extensions
+  - SizeDisplay show the width and height of a component or Stack
+  - LocalizationHelper shows if the text is translated or not
+  - LayoutGuide sets some horizontal and vertical lines on the screen to align the components
 
 ## Requirements
 The following table outlines the requirements for this package:
